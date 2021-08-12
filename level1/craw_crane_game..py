@@ -14,6 +14,6 @@ def solution(board, moves):
                 else:                                               # 같을 경우
                     stack.pop(-1)                                   # 스택에 있는 마지막 인형과, 선택한 인형을 터트리고 터트린 인형 수 2개 카운트
                     answer += 2
-                board[i][loc] = 0                                   # 기계에 선택된 라인에 있는 인형을 뽑았기 떄문에 해당 인형을 없앰
+                board[i][loc] = 0                                   # 기계에 선택된 라인에 있는 인형을 뽑았기 때문에 해당 인형을 없앰
                 break                                               # 인형이 탐색된 경우 더 이상 탐색하지 않고 반복문을 빠져나감
     return answer
