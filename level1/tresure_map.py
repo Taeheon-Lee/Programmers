@@ -1,4 +1,4 @@
-"보물 지도"
+"비밀 지도"
 
 # 문제 링크 "https://programmers.co.kr/learn/courses/30/lessons/17681"
 
