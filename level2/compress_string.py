@@ -15,14 +15,14 @@ def solution(s):
                 if count == 1:                          # 카운트 수가 1일 경우, 뒤에 동일한 문자열이 없다는 것이기 때문에 문자열을 압축하지 않음
                     total_length += cut                 # 총 개수에 자른 문자열 길이만큼 더함
                 else:                                   # 1보다 클 경우, 압축 가능하기 때문에
-                    total_length += (str(count)+cut)    # 압축 개수가 10이상일 경우 2자리 수이기 때문에 문자열로 변환하여 숫자 길이와 자른 문자열 길이를 총 개수에 더함
+                    total_length += (len(str(count))+cut)    # 압축 개수가 10이상일 경우 2자리 수이기 때문에 문자열로 변환하여 숫자 길이와 자른 문자열 길이를 총 개수에 더함
                 tmp = s[i:i+cut]                        # 비교 문자열을 해당 위치에서 자른 문자열로 새롭게 변경
                 count = 1                               # 비교 문자열 다음부터 체크하기 때문에 다시 카운트를 1로 초기화
             if i == len(s)-cut:                         # 현재 위치가 마지막 위치이고 더 자를 수 있는 경우, 탐색을 종료하고 카운트를 체크해야 하기 때문에 카운트를 총 길이에 반영
                 if count == 1:
                     total_length += cut
                 else:
-                    total_length += (str(count)+cut)
+                    total_length += (len(str(count))+cut)
             elif i > len(s)-cut:                        # 현재 위치가 마지막 위치이고 더 자를 수 없는 경우, 나머지는 압축이 불가능하기 때문에 그대로 길이만큼 총 길이에 추가
                 total_length += len(s[i:])
         lst.append(total_length)                        # 총 길이를 정답 리스트에 추가
